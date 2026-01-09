@@ -1,111 +1,35 @@
-# MIKA-A-Governed-Cognitive-Assistant
+🧠 MIKA — Governed Cognitive AI Agent
 
-MIKA is an experimental governed cognitive agent designed to reason, reflect, and extend its own capabilities under explicit, immutable constraints.
+A locally hosted, governed cognitive AI system designed to reason, remember, and extend its own capabilities under explicit, immutable rules.
 
-Unlike conventional chatbots or fine-tuned AI models, MIKA does not improve by retraining itself.
-Instead, it learns by building tools, models, and strategies—including neural networks—while operating inside a clearly defined governance framework.
+MIKA is built as a private, offline-capable AI agent that prioritizes control, transparency, and human authority, while still allowing advanced behaviors such as tool creation and neural-network building in sandboxed environments.
 
-This project explores how autonomy, learning, and safety can coexist in a single system.
+✨ Features
 
-✨ Core Principles
+🛡 Governor-based control model (immutable rules, enforced at runtime)
 
-Governed Autonomy
-MIKA operates under an immutable Governor that defines what actions are allowed, forbidden, or require approval.
+🧠 Persistent memory with importance weighting
 
-Learning Without Fine-Tuning
-The base language model remains static.
-Learning happens through tool creation, strategy adaptation, and experience.
+❤️ Emotion & feedback loop for behavioral adaptation
 
-Internal Monologue
-MIKA maintains a private reasoning layer used for self-reflection and decision-making.
+🪞 Internal monologue (private reasoning layer)
 
-Tool & Model Creation
-When existing capabilities are insufficient, MIKA can propose and build new tools or neural networks (in sandboxed environments).
+🧩 Capability-based learning (tools & models, not self-rewriting)
 
-Human-Centric Authority
-Final authority always remains with the human operator.
+🧪 Sandboxed execution for experiments and training
 
-Model & Intelligence Stack
-Base Language Model
+🖥 Fully local / offline-capable
 
-llama.cpp (GGUF format)
+🔍 Full auditability of decisions and actions
 
-Supports CPU and GPU offloading
+🧭 Design Philosophy
 
-Model is static (not fine-tuned during runtime)
+MIKA is not a self-modifying AI.
 
-MIKA uses the LLM strictly as a language and reasoning substrate, not as a learning mechanism.
-Learning Philosophy
- No online fine-tuning
- No self-modifying core logic
- Experience-based learning
- Tool and model generation
- Strategy adaptation
+Instead, it follows a parent–child governance model:
 
+The Governor defines non-negotiable boundaries
 
+MIKA may explore, learn, and build within those boundaries
 
-🛡️Governance Model
-
-MIKA follows a parent–child governance model:
-The Governor defines non-negotiable rules.
-MIKA may explore, reason, and build within those rules.
-MIKA may request approval for escalations.
-MIKA may never alter the Governor itself.
-This separation ensures:
-bounded autonomy
-transparency
-accountability
-safety
-
-🧪 Capabilities (Current & Planned)
-Implemented:
-
-Conversational reasoning
-Emotional state tracking
-Memory with importance weighting
-Feedback-driven behavior adjustment
-Governor-aware decision making
-Local LLM inference via llama.cpp
-
-In Progress / Planned:
-
-Internal monologue module
-Capability registry
-Sandboxed execution environment
-
-Dependencies
-
-Requirements:
-pyyaml
-pytz
-vaderSentiment
-spacy
-scikit-learn
-numpy
-sentence-transformers
-llama-cpp-python
-
-Download:python -m spacy download en_core_web_sm
-
-Configure MIKA
-
-Edit config.json to set:
-user name
-model path (GGUF)
-runtime preferences
-
-
-⚠️ Disclaimer
-
-This project is experimental and intended for:
-research
-learning
-architectural exploration
-It is not a production-ready autonomous system.
-
-📜 License
-MIT
-
-Tool & neural network generation
-Approval workflow for new capabilities
-Resource-bounded learning lifecycle
+Authority remains human-held at all times
