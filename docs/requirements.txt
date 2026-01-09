@@ -1,0 +1,8 @@
+pyyaml
+pytz
+vaderSentiment
+spacy
+scikit-learn
+numpy
+sentence-transformers
+llama-cpp-python
