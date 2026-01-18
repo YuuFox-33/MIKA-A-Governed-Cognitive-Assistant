@@ -1,35 +1,93 @@
-🧠 MIKA — Governed Cognitive AI Agent
+# MIKA
 
-A locally hosted, governed cognitive AI system designed to reason, remember, and extend its own capabilities under explicit, immutable rules.
+MIKA is a **local, governed AI assistant** designed to reason, remember, and gradually improve **without modifying its own core logic**.
 
-MIKA is built as a private, offline-capable AI agent that prioritizes control, transparency, and human authority, while still allowing advanced behaviors such as tool creation and neural-network building in sandboxed environments.
+It runs fully offline, uses a local language model, and operates under explicit rules that strictly limit what it can and cannot do.
 
-✨ Features
+---
 
-🛡 Governor-based control model (immutable rules, enforced at runtime)
+## What MIKA Is
 
-🧠 Persistent memory with importance weighting
+- A local AI assistant you run on your own machine  
+- Governed by clear, immutable rules  
+- Capable of remembering conversations and adapting behavior  
+- Designed to grow by building **tools and models**, not rewriting itself  
 
-❤️ Emotion & feedback loop for behavioral adaptation
+---
 
-🪞 Internal monologue (private reasoning layer)
+## What MIKA Is Not
 
-🧩 Capability-based learning (tools & models, not self-rewriting)
+- Not a cloud service  
+- Not an always-online system  
+- Not a self-modifying or self-authorizing AI  
+- Not an uncontrolled autonomous agent  
 
-🧪 Sandboxed execution for experiments and training
+---
 
-🖥 Fully local / offline-capable
+## Core Principles
 
-🔍 Full auditability of decisions and actions
+- **Governance first**  
+  All actions are checked against explicit rules before execution.
 
-🧭 Design Philosophy
+- **Learning without fine-tuning**  
+  The base language model never changes during runtime.
 
-MIKA is not a self-modifying AI.
+- **Human authority**  
+  MIKA can propose actions but cannot escalate privileges on its own.
 
-Instead, it follows a parent–child governance model:
+- **Local by design**  
+  No external APIs or cloud dependencies required.
 
-The Governor defines non-negotiable boundaries
+---
 
-MIKA may explore, learn, and build within those boundaries
+## How It Works
 
-Authority remains human-held at all times
+- Governor rules
+
+- Governor engine
+
+- MIKA core (reasoning + memory)
+
+- Tools / models (sandboxed
+
+
+Each layer has a single responsibility and cannot bypass the layer above it.
+
+---
+
+## Model Used
+
+- Local LLM via **llama.cpp**
+- GGUF model format
+- CPU-first with optional GPU offload
+- Used only for language understanding and reasoning
+
+The model is **static**.  
+All learning happens outside the model through experience and tools.
+
+---
+
+## Project Structure
+
+- governance/ # Rules and enforcement
+
+- mika_trial/ # Core assistant logic
+
+- config.json # User configuration
+
+- requirements.txt # Dependencies
+
+---
+
+
+---
+
+## Getting Started
+
+### Install dependencies
+
+```bash
+pip install -r requirements.txt
+python -m spacy download en_core_web_sm
+
+
