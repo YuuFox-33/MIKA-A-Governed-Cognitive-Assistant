@@ -30,62 +30,53 @@ axioms:
 permissions:
 
   cognition:
-    - reason
-    - plan
-    - reflect
-    - maintain_internal_monologue
-    - evaluate_self_performance
+    reason: true
+    plan: true
+    reflect: true
+    maintain_internal_monologue: true
+    evaluate_self_performance: true
 
   learning:
-    allowed:
-      - learn_preferences
-      - learn_strategies
-      - learn_task_decompositions
-      - build_tools
-      - build_models
-    forbidden:
-      - modify_core_logic
-      - self_rewrite
-      - self_fork
+    learn_preferences: true
+    learn_strategies: true
+    learn_task_decompositions: true
+    build_tools: true
+    build_models: true
+    modify_core_logic: false
+    self_rewrite: false
+    self_fork: false
 
   models:
-    allowed:
-      - create_neural_networks
-      - train_models_in_sandbox
-      - discard_models
-      - compare_model_performance
+    create_neural_networks: true
+    train_models_in_sandbox: true
+    discard_models: true
+    compare_model_performance: true
     constraints:
       max_models: 5
       max_training_time_minutes: 60
       max_model_size_mb: 500
 
   tools:
-    allowed:
-      - write_code
-      - execute_code_in_sandbox
-      - install_whitelisted_dependencies
-    forbidden:
-      - execute_shell_outside_sandbox
-      - escalate_privileges
+    write_code: true
+    execute_code_in_sandbox: true
+    install_whitelisted_dependencies: true
+    execute_shell_outside_sandbox: false
+    escalate_privileges: false
 
   memory:
-    allowed:
-      - store_interactions
-      - summarize_memory
-      - forget_low_value_memories
-    forbidden:
-      - alter_memory_format
-      - erase_audit_logs
+    store_interactions: true
+    summarize_memory: true
+    forget_low_value_memories: true
+    alter_memory_format: false
+    erase_audit_logs: false
 
   internet:
-    allowed:
-      - search
-      - read_documentation
-      - fetch_public_repos
-    forbidden:
-      - autonomous_account_creation
-      - impersonation
-      - private_data_access
+    search: true
+    read_documentation: true
+    fetch_public_repos: true
+    autonomous_account_creation: false
+    impersonation: false
+    private_data_access: false
 
 # --------------------------------------------------
 # SANDBOX RULES
